@@ -1,3 +1,1 @@
-# ai_bot
-# ai_bot
-# ai_bot
+# Нейробот для работы с Gemini

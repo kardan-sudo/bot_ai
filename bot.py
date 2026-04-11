@@ -7,7 +7,7 @@ from ai import fetch_models, TEXT_MODELS_URL, select_model_from_list, generate_t
 from button_cancel import CancelKeyboard
 
 
-TOKEN="8059840583:AAESFtQAcH7PwJEghh-RuPRZ0JU7POUVHUk"
+TOKEN="Token"
 
 user_states = {}
 user_models = {}
