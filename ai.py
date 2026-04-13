@@ -2,7 +2,6 @@ import os
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
-from PIL import Image
 
 load_dotenv()
 GEMINI_API_KEY = os.getenv("API_KEY")
@@ -18,7 +17,7 @@ class Client:
 
     def create_chat(self):
         """Метод для создания нового чата"""
-        self.current_chat = self.client.chats.create(model='gemini-2.5-flash')
+        self.current_chat = self.client.chats.create(model='gemini-3.1-flash-lite-preview')
 
     def drop_chat(self):
         """Метод для удаления чата"""
@@ -37,6 +36,7 @@ class Client:
         
 
 
-bot = Client()
-bot.send_message("Привет! Кто ты? 12341")
-bot.send_message("Какую цифру я тебе говорил?")
+bot = Client(role='Senior Architect & Refactoring Expert', thinking_level='high')
+bot.create_chat()
+bot.send_message("Привет! Кто ты? Запомни число 123415123")
+bot.send_message("Какое число я тебе говорил? И пожелай хорошего дня тем, кто читает мою статью для работы с Gemini API")
